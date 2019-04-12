@@ -472,6 +472,13 @@ class Game
                 String text = "FINISH Winner is " + winner.name + " with " 
                              + winner.totalSum + " points !  All results: ";
                 
+                for(Player player : allPlayer)
+                {
+                     if(player.index != winner.index && player.totalSum == winner.totalSum)
+                        text = "FINISH It's Tie. All results: ";
+                }
+                
+                
                 text += result;
                 
                 for(Player player : allPlayer)
